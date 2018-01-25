@@ -23,9 +23,18 @@ console.log('I\'m read "Хоббит"',books['Хоббит'])
 document.getElementById('ok').onclick = function (){
     var person = {
         name: document.getElementById('name').value,
-        number: document.getElementById('number').value 
+        number: document.getElementById('number').value, 
+        toString: function() { 
+            return '<br> Имя: ' + this.name + ', Номер: ' + this.number;
+        } 
     };
+   
     
     numbers.push(person);
     console.log(numbers)
 }
+document.getElementById('read').onclick = function (){
+
+    document.getElementById('dictionary').innerHTML = '<br><p>'+numbers+'</p>'; 
+}
+

@@ -5,13 +5,23 @@
 </head>
 <body>
     <h1>Записная книжка</h1>
-    <label>Имя :</label>
+    <div>
+    <label>
+    <span> Имя : </span>
+    </label>
     <input name="name" id="name">
+    </div>
     <br>
+    <div>
     <label>Номер: </label>
-    <input name="number" type="number" id="number">
+    <input name="number" id="number">
+    </div>
     <br>
     <input type="submit" name="ok" id="ok" value="Добавить">
+    <input type="submit" name="read" id="read" value="Показать записи">
+    <div id="dictionary">
+    </div>
+    
     <script src="lesson_5.js"></script>
 
 </body>

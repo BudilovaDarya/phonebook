@@ -5,9 +5,12 @@ h1{
     margin: 10px;
 
 }
+span {
+	display: inline-block; 
+	width: 50px;
+}
 label{
     margin: 10px;
-    padding: 10;
 }
 td {
 	height: 40px;
@@ -17,7 +20,4 @@ td {
 	vertical-align:middle;
 
 	
-}
-input {
-	margin: 10px;
 }
