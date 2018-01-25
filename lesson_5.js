@@ -1,4 +1,6 @@
 var numbers = [];
+const tmp = (person) => `<p>Имя: ${person.name}, тел: ${person.number}</p>`;
+// function tmp(){}
 
 var standartVoltage = '1.5 V'
 var batery = {
@@ -24,17 +26,23 @@ document.getElementById('ok').onclick = function (){
     var person = {
         name: document.getElementById('name').value,
         number: document.getElementById('number').value, 
-        toString: function() { 
-            return '<br> Имя: ' + this.name + ', Номер: ' + this.number;
-        } 
-    };
-   
-    
+//        toString: function() { 
+//            return '<br> Имя: ' + this.name + ', Номер: ' + this.number;
+//        } 
+  };
     numbers.push(person);
-    console.log(numbers)
+    console.log(numbers);
+
 }
 document.getElementById('read').onclick = function (){
-
-    document.getElementById('dictionary').innerHTML = '<br><p>'+numbers+'</p>'; 
+    var stringedPhones = ""
+    // for(var i in numbers) {
+    //     stringedPhones += '<p>'+ numbers[i].name + ' ' + numbers[i].number +'</p>'; 
+    // }
+    for(var i in numbers){
+        
+        stringedPhones += tmp(numbers[i]);
+    }
+    document.getElementById('dictionary').innerHTML = stringedPhones;
 }
 
